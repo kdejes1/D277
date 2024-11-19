@@ -20,6 +20,7 @@
         <nav class="explore-cities">
             <h3>Explore Cities</h3>
             <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
                 <li><a href="austin.html">Austin</a></li>
                 <li><a href="san-antonio.html">San Antonio</a></li>
                 <li><a href="dallas.html">Dallas</a></li>
@@ -28,35 +29,40 @@
 
         <!-- Main Content with Form -->
         <main class="main-content">
-            <h2>Get in Touch</h2>
-            <p>If you have any questions, comments, or feedback, please fill out the form below, and we’ll get back to
-                you as soon as possible.</p>
-
+            <section>
+                <h2>Get in Touch</h2>
+                <img src="images/flag.jpg" alt="Texas Flag" height="120px">
+                <p>If you have any questions, comments, or feedback, please fill out the form below, and we’ll get back
+                    to
+                    you as soon as possible.</p>
+            </section>
             <!-- Web Form with onSubmit Event -->
-            <form onsubmit="return validateEmails()">
-                <!-- First Name Field -->
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
+            <section>
+                <form onsubmit="return validateEmails()">
+                    <!-- First Name Field -->
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
 
-                <!-- Last Name Field -->
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required>
+                    <!-- Last Name Field -->
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
 
-                <!-- Email Address Field -->
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                    <!-- Email Address Field -->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <!-- Confirm Email Field -->
-                <label for="confirm-email">Confirm Email Address:</label>
-                <input type="email" id="confirm-email" name="confirm-email" required>
+                    <!-- Confirm Email Field -->
+                    <label for="confirm-email">Confirm Email Address:</label>
+                    <input type="email" id="confirm-email" name="confirm-email" required>
 
-                <!-- Question Field -->
-                <label for="question">Your Question:</label>
-                <textarea id="question" name="question" rows="4" required></textarea>
+                    <!-- Question Field -->
+                    <label for="question">Your Question:</label>
+                    <textarea id="question" name="question" rows="4" required></textarea>
 
-                <!-- Submit Button -->
-                <button type="submit">Submit</button>
-            </form>
+                    <!-- Submit Button -->
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
         </main>
 
         <!-- Contact Information Section -->
@@ -84,7 +90,7 @@
             const email = document.getElementById("email").value;
             const confirmEmail = document.getElementById("confirm-email").value;
             if (email !== confirmEmail) {
-                alert("The email addresses do not match. Please re-enter your emails.");
+                alert("The email addresses provided do not match. Please re-enter emails.");
                 return false;
             }
             return true;
