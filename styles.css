@@ -17,6 +17,7 @@ main h3 {
     color: #002868;
     font-size: largest;
     background-color: #ff0037;
+
 }
 
 /* Header */
@@ -204,10 +205,22 @@ tr:hover {
 
 /* Footer */
 footer {
+    position: relative;
+    height: 100px;
+    padding: 20px;
     background-color: #002868;
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+footer h2 {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    left: 30px;
+    margin: 0;
+    font-size: 38px;
 }
 
 footer p,
@@ -220,12 +233,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Refined Intro Text Styling */
 .intro-text {
     margin-bottom: 10px;
     line-height: 1.5;
     font-size: 1em;
+    float: left;
+    width: 89%;
 }
+
+.intro-text+* {
+    clear: both;
+}
+
 
 .intro-text strong {
     color: #bf0a30;
@@ -235,7 +254,6 @@ footer a:hover {
 
 .intro-text em {
     color: #002868;
-    /* Complementary color for emphasis */
     font-style: italic;
 }
 
@@ -275,7 +293,7 @@ textarea {
 button[type="submit"] {
     padding: 10px;
     background-color: #bf0a30;
-    color: white;
+    color: rgb(248, 245, 245);
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
